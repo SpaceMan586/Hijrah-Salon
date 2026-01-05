@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --salon-gradient: linear-gradient(to bottom, #FFF3F3, #FAACD7);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--salon-gradient) fixed;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
