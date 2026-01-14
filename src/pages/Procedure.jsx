@@ -1,5 +1,5 @@
 import React from 'react';
-import { Timeline } from 'flowbite-react';
+import { Timeline, TimelineItem, TimelinePoint, TimelineContent, TimelineTime, TimelineTitle, TimelineBody } from 'flowbite-react';
 import { HiCalendar, HiCheckCircle, HiClock, HiShieldCheck } from 'react-icons/hi';
 import { useAdmin } from '../context/AdminContext';
 
@@ -21,20 +21,20 @@ export default function Procedure() {
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
             <Timeline>
                 {procedure.steps.map((step, idx) => (
-                    <Timeline.Item key={idx}>
-                        <Timeline.Point icon={
+                    <TimelineItem key={idx}>
+                        <TimelinePoint icon={
                             idx === 0 ? HiCalendar : 
                             idx === 1 ? HiCheckCircle : 
                             idx === 2 ? HiClock : HiShieldCheck
                         } />
-                        <Timeline.Content>
-                            <Timeline.Time className="text-pink-500 font-bold">Langkah {idx + 1}</Timeline.Time>
-                            <Timeline.Title>{step.title}</Timeline.Title>
-                            <Timeline.Body>
+                        <TimelineContent className="ml-10">
+                            <TimelineTime className="text-pink-500 font-bold">Langkah {idx + 1}</TimelineTime>
+                            <TimelineTitle className="text-gray-900">{step.title}</TimelineTitle>
+                            <TimelineBody className="text-gray-600">
                                 {step.desc}
-                            </Timeline.Body>
-                        </Timeline.Content>
-                    </Timeline.Item>
+                            </TimelineBody>
+                        </TimelineContent>
+                    </TimelineItem>
                 ))}
             </Timeline>
         </div>
