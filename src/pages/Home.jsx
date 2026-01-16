@@ -22,12 +22,12 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/booking">
-                <Button size="xl" gradientDuoTone="pinkToOrange" className="border-2 border-white shadow-xl hover:scale-105 transition-transform duration-300">
+                <Button size="xl" gradientDuoTone="pinkToOrange" className="border-2 border-white shadow-xl hover:scale-105 transition-transform duration-300 w-full sm:w-auto">
                 Book Appointment
                 </Button>
             </Link>
             <Link to="/menu">
-                <Button size="xl" color="light" className="bg-white/90 hover:bg-white text-gray-800 border-2 border-pink-500 shadow-xl hover:scale-105 transition-transform duration-300">
+                <Button size="xl" color="light" className="bg-white/90 hover:bg-white text-gray-800 border-2 border-pink-500 shadow-xl hover:scale-105 transition-transform duration-300 w-full sm:w-auto">
                 View Pricelist
                 </Button>
             </Link>
